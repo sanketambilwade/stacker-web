@@ -12,6 +12,14 @@
           "onAwake": {
             "actions": [
               {
+                "Name": "Objects",
+                "ID": 990001,
+                "Query": "WebShot_Intro1",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
                 "Name": "Player",
                 "ID": -1,
                 "Query": "",
@@ -56,6 +64,14 @@
           "onStart": {
             "actions": [
               {
+                "Name": "ObjectAnimationAction",
+                "ID": 990001,
+                "Query": "WebShot_Intro1",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"WebShot_Intro1_End#$990002\",\"lerpDuration\":16.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
                 "Name": "VoiceOver",
                 "ID": 891093,
                 "Query": "VOPlayer",
@@ -85,6 +101,30 @@
                 "Query": "Intro-UIPanel",
                 "Option": "Despawn",
                 "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 990003,
+                "Query": "WebShot_Intro2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 990001,
+                "Query": "WebShot_Intro1",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 990003,
+                "Query": "WebShot_Intro2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"WebShot_Intro2_End#$990004\",\"lerpDuration\":10.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -149,6 +189,14 @@
                     "Query": "ContinueButton-Panel",
                     "Option": "Despawn",
                     "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 990003,
+                    "Query": "WebShot_Intro2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
                     "Type": 0
                   }
                 ]
@@ -552,11 +600,11 @@
                 "Type": 0
               },
               {
-                "Name": "ComponentToggleAction",
-                "ID": 666993,
-                "Query": "RigParent_Anim",
-                "Option": "Enable",
-                "Data": "{\"componentName\":\"Animator\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Pre-InspectionVehicle_SP#$525843\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -580,15 +628,7 @@
                 "ID": 891093,
                 "Query": "VOPlayer",
                 "Option": "Play",
-                "Data": "{\"text\":\"This is where the battery-operated stacker is used to move FLCs for loading and unloading around the docking area.\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
-                "Type": 0
-              },
-              {
-                "Name": "TimerAction",
-                "ID": 24501,
-                "Query": "CountDownTimer",
-                "Option": "Start",
-                "Data": "{\"duration\":95.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"text\":\"This is where the battery-operated stacker is used to move FLCs for loading and unloading around the docking area.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
