@@ -1,0 +1,4952 @@
+{
+  "name": "Yard Marshal Training",
+  "formatVersion": 2.0,
+  "chapters": [
+    {
+      "name": "Yard Marshal",
+      "chapterIndex": 0,
+      "moments": [
+        {
+          "name": "Introduction & PPE",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Welcome to the Yard Marshal training module. Today you'll learn how to safely guide trucks in and out of the dock yard.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let's start by putting on your gear. Grab each item to wear it - jacket, shoes, cap, whistle, and walkie-talkie.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 529078,
+                "Query": "Vest",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 189868,
+                "Query": "Shoe",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 46591,
+                "Query": "Whistle",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 638418,
+                "Query": "WalkieTalkie",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 430235,
+                "Query": "Cap",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 529078,
+                "Query": "Vest",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 189868,
+                "Query": "Shoe",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 46591,
+                "Query": "Whistle",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 638418,
+                "Query": "WalkieTalkie",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 430235,
+                "Query": "Cap",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 529078,
+                  "Query": "Vest",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 529078,
+                    "Query": "Vest",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 529078,
+                    "Query": "Vest",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 529078,
+                    "Query": "Vest",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 189868,
+                  "Query": "Shoe",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 189868,
+                    "Query": "Shoe",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 189868,
+                    "Query": "Shoe",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 189868,
+                    "Query": "Shoe",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 46591,
+                  "Query": "Whistle",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 46591,
+                    "Query": "Whistle",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 46591,
+                    "Query": "Whistle",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 46591,
+                    "Query": "Whistle",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 638418,
+                  "Query": "WalkieTalkie",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 638418,
+                    "Query": "WalkieTalkie",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 638418,
+                    "Query": "WalkieTalkie",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 638418,
+                    "Query": "WalkieTalkie",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 430235,
+                  "Query": "Cap",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 430235,
+                    "Query": "Cap",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 430235,
+                    "Query": "Cap",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 430235,
+                    "Query": "Cap",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Don't forget \\u2014 touch each item to wear it.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Touch the highlighted item to put it on.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Roles & Responsibilities Briefing",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Roles&Responsibilities_SP#$737117\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 845292,
+                "Query": "Roles&ResponsibilitiesUIPanel",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"As a Yard Marshal, you'll communicate and coordinate with your team via walkie-talkie.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"You'll coordinate with the Dock Associate to guide trucks to the correct docking bays.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"And you'll use the correct audio and visual cues to guide the driver.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 845292,
+                "Query": "Roles&ResponsibilitiesUIPanel",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Truck Arrival & Yard Pass Animation",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The journey for trucks starts at the main gate where the driver needs to collect the gate pass and a reflective jacket at the yard management system gate and then go to either the parking or docks as per instructions.\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 962705,
+                "Query": "Npc_GettingDown_V2",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Scene\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 962705,
+                "Query": "Npc_GettingDown_V2",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 933988,
+                "Query": "Npc_CollectingPass",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"GetYardPass_SP#$22828\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 933988,
+                "Query": "Npc_CollectingPass",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Scene\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 971544,
+                "Query": "TruckGoing",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 933988,
+                "Query": "Npc_CollectingPass",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Roles&Responsibilities_SP#$737117\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "PlayLoop",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 971544,
+                "Query": "TruckGoing",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Scene\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "StopAndSkip",
+                "Data": "{\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Wrong Side Guidance",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 971544,
+                "Query": "TruckGoing",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 177512,
+                "Query": "Truck2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us look at what can go wrong if the yard marshal is not following the rules.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 979062,
+                "Query": "NPC_GetsHitByTruck",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"NPCHitbyTruck_SP#$521154\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":1.0,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 177512,
+                "Query": "Truck2",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Truck2_NPCHit\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 979062,
+                "Query": "NPC_GetsHitByTruck",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_GetsHitByTruck\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3.2,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 315140,
+                "Query": "WrongSideGuidanceUIPanel",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Always stand on the Right Hand Side of a moving truck — it keeps you in the driver's clear line of sight. Yard marshal should never stand on the opposite side of the driver or behind the truck while guiding it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Choose the Correct Guiding Side",
+          "momentIndex": 4,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"GuidingSide_SP#$90272\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 177512,
+                "Query": "Truck2",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 315140,
+                "Query": "WrongSideGuidanceUIPanel",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 979062,
+                "Query": "NPC_GetsHitByTruck",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 73628,
+                "Query": "Truck1",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Choose the side you need to stand on to guide the truck.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 828453,
+                "Query": "GuidanceSideTruck",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MCQResponseAction",
+                "ID": 651501,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "",
+                "Data": "{\"questionIndex\":1,\"questionText\":\"Choose the side you need to stand on to guide the truck.\",\"optionsList\":[\"Right hand side\",\"Left hand side\"],\"correctOptionIndex\":[1],\"showAnswerDuration\":2.0,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Any",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 651501,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "CorrectResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 828453,
+                    "Query": "GuidanceSideTruck",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct, Right hand side keeps you visible to the driver.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 651501,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "WrongResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 828453,
+                    "Query": "GuidanceSideTruck",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Remember standing on the Left hand side puts you outside the driver's view.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Right hand side keeps you visible to the driver.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick a side to stand on to guide the truck.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the RHS button.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us move to the right spot.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Grab the Walkie Talkie",
+          "momentIndex": 5,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"RightHandSideSpot_SP#$419190\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 670791,
+                "Query": "WalkieTalkie2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"To communicate with your coworker, you need to use a walkie talkie. Go ahead and grab the walkie-talkie.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 670791,
+                "Query": "WalkieTalkie2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 670791,
+                  "Query": "WalkieTalkie2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 670791,
+                    "Query": "WalkieTalkie2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/RadioStatic-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.4,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"This is the dock associate speaking, truck with number plate ending in three five nine one needs to be parked in dock bay 2.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Pick up the walkie-talkie.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Grab the walkie talkie now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Remember for vehicle placement, the Yard Marshal will receive communication from the dock team over the walkie-talkie regarding where the vehicle needs to be docked.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 670791,
+                "Query": "WalkieTalkie2",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Guide the Truck Forward",
+          "momentIndex": 6,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 923264,
+                "Query": "Whistle2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the whistle to guide the truck driver forward, until they reach bay 2.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 923264,
+                "Query": "Whistle2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 923264,
+                  "Query": "Whistle2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 923264,
+                    "Query": "Whistle2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Now blow the whistle\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "CollisionTrigger",
+                  "ID": 627959,
+                  "Query": "WhistleTrigger",
+                  "Option": "Enter",
+                  "Data": "{\"targetCollisionGameObject\":\"Whistle2#$868352\",\"isTrigger\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Whistle-New\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "ObjectAnimationAction",
+                    "ID": 73628,
+                    "Query": "Truck1",
+                    "Option": "PositionRotation",
+                    "Data": "{\"targetTransform\":\"Truck1_Transform#$878617\",\"lerpDuration\":5.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Grab the whistle.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the whistle now.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Always ensure that the truck does not exceed the 15-kilometer-per-hour speed limit inside the yard and a 8 kilometer per hour limit in the parking area.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 923264,
+                "Query": "Whistle2",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Correct Reverse-Park Demonstration",
+          "momentIndex": 7,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"TruckReverse_SP#$963181\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 177345,
+                "Query": "Truck3",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 73628,
+                "Query": "Truck1",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 711256,
+                "Query": "Npc_ReverseAssist",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Watch closely this is the correct way to reverse-park a truck. Stand on the RHS, in the driver's clear line of sight. Use short, sharp whistle blasts to signal keep moving, paired with a steady hand motion pointing the direction to turn.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 711256,
+                "Query": "Npc_ReverseAssist",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_ReverseAssist\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "PlayLoop",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Truck-Reverse-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 177345,
+                "Query": "Truck3",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"Truck3.1Reverse_Transform#$772913\",\"lerpDuration\":4.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "StopAndSkip",
+                "Data": "{\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Stop the Truck",
+          "momentIndex": 8,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 711256,
+                "Query": "Npc_ReverseAssist",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 154487,
+                "Query": "Whistle3_3",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"It is your time to signal the truck to stop. Grab the whistle and blow a long, continuous whistle.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 154487,
+                "Query": "Whistle3_3",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 154487,
+                  "Query": "Whistle3_3",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 154487,
+                    "Query": "Whistle3_3",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Now blow the whistle\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "CollisionTrigger",
+                  "ID": 627959,
+                  "Query": "WhistleTrigger",
+                  "Option": "Enter",
+                  "Data": "{\"targetCollisionGameObject\":\"Whistle3_3#$154487\",\"isTrigger\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Whistle-New\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "ObjectAnimationAction",
+                    "ID": 177345,
+                    "Query": "Truck3",
+                    "Option": "PositionRotation",
+                    "Data": "{\"targetTransform\":\"Truck3.2Reverse_Transform#$835273\",\"lerpDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Truck-Idle-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Blow the whistle to stop the truck.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Use the whistle now to stop the truck before it is too late.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 154487,
+                "Query": "Whistle3_3",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Collect the Gate Pass Document",
+          "momentIndex": 9,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 177345,
+                "Query": "Truck3",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 995911,
+                "Query": "PTW Handover",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"NPCPTW_SP#$426405\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Animation",
+                "ID": 449,
+                "Query": "Npc_PtwHandover",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Npc_PtwHandover\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"It is your responsibility to collect the yard pass and vehicle documents from the driver. Grab the documents from their hand.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 532851,
+                "Query": "PTWPad",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 36476,
+                "Query": "PTW_ConfinedSapces",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 532851,
+                "Query": "PTWPad",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 532851,
+                  "Query": "PTWPad",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 532851,
+                    "Query": "PTWPad",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Take the document from the driver.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Grab the documents from the driver now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 532851,
+                "Query": "PTWPad",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Driver Exit Procedure",
+          "momentIndex": 10,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 651501,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"MCQPanel2_Transform#$922349\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 995911,
+                "Query": "PTW Handover",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 124831,
+                "Query": "Truck4",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"GatePass_SP#$449376\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The driver needs to step out of the vehicle. What is the correct procedure they should follow?\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MCQResponseAction",
+                "ID": 651501,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "",
+                "Data": "{\"questionIndex\":2,\"questionText\":\"What should the driver do before stepping out?\",\"optionsList\":[\"Apply hand brake, turn off vehicle, then step out\",\"Leave engine running and step out\"],\"correctOptionIndex\":[1],\"showAnswerDuration\":2.0,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Any",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 651501,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "CorrectResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct!\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 651501,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "WrongResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Not quite, leaving the engine running is unsafe.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Select an option to continue.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Select the correct option now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Always ask the driver to turn off their vehicle and apply hand break before stepping out.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Collect the Truck Keys",
+          "momentIndex": 11,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 196231,
+                "Query": "Npc_GivingKeys",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 138452,
+                "Query": "OtherSFXPlayer",
+                "Option": "StopAndSkip",
+                "Data": "{\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Collect the truck keys from the driver.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 196231,
+                "Query": "Npc_GivingKeys",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Npc_HandingKeys_001\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 491962,
+                "Query": "Keychain2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 376752,
+                "Query": "Keychain",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 491962,
+                "Query": "Keychain2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 491962,
+                  "Query": "Keychain2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.3,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 491962,
+                    "Query": "Keychain2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 491962,
+                    "Query": "Keychain2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 196231,
+                    "Query": "Npc_GivingKeys",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Take the keys from the driver.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Grab the keys now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The keys need to be handed over to the dock associate.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Guide Truck Forward",
+          "momentIndex": 12,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"MoveForward_SP#$902669\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The dock associate performs seal cutting process. Once it is done, the truck needs to move forward. I've handed the truck keys back to the driver for you.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 394955,
+                "Query": "Whistle4",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the whistle to blow short but continous whistles to indicate the driver to move.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 394955,
+                "Query": "Whistle4",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 394955,
+                  "Query": "Whistle4",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 394955,
+                    "Query": "Whistle4",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "CollisionTrigger",
+                  "ID": 627959,
+                  "Query": "WhistleTrigger",
+                  "Option": "Enter",
+                  "Data": "{\"targetCollisionGameObject\":\"Whistle4#$977194\",\"isTrigger\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Whistle-New\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "ObjectAnimationAction",
+                    "ID": 124831,
+                    "Query": "Truck4",
+                    "Option": "PositionRotation",
+                    "Data": "{\"targetTransform\":\"Truck3Forward_Transform#$873687\",\"lerpDuration\":4.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 394955,
+                    "Query": "Whistle4",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Use the whistle to guide the truck forward.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Blow the whistle now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Guide Truck Reverse into Bay",
+          "momentIndex": 13,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 723643,
+                "Query": "Npc_OpensTruckDoor",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 124831,
+                "Query": "Truck4",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The driver needs to turn off the vehicle and get down to open the truck's back doors.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"TruckDoorOpen_SP#$558275\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 723643,
+                "Query": "Npc_OpensTruckDoor",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Scene\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Time to reverse the truck back into the bay. Grab the whistle to start guiding the driver into position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"MoveForward_SP#$902669\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 36216,
+                "Query": "Whistle5",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 176890,
+                "Query": "Truck 5",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 723643,
+                "Query": "Npc_OpensTruckDoor",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":0.2,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 36216,
+                "Query": "Whistle5",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 36216,
+                  "Query": "Whistle5",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 36216,
+                    "Query": "Whistle5",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "CollisionTrigger",
+                  "ID": 627959,
+                  "Query": "WhistleTrigger",
+                  "Option": "Enter",
+                  "Data": "{\"targetCollisionGameObject\":\"Whistle5#$36216\",\"isTrigger\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Whistle-New\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "PlayLoop",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "ObjectAnimationAction",
+                    "ID": 176890,
+                    "Query": "Truck 5",
+                    "Option": "PositionRotation",
+                    "Data": "{\"targetTransform\":\"Truck3.1Reverse_Transform#$772913\",\"lerpDuration\":4.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 138452,
+                    "Query": "OtherSFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 36216,
+                    "Query": "Whistle5",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Use the whistle to guide the truck in reverse.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Blow the whistle now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Once the driver exits the vehicle safely and has submitted the truck keys, they need to be escorted to the driver's restroom until it is time for them to leave.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Apply Wheel Chocks",
+          "momentIndex": 14,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"MoveForward_SP#$902669\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 808832,
+                "Query": "WheelChock",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"You need to apply wheel chocks to the parked truck. Grab and place a wheel chock to the tyre.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 808832,
+                "Query": "WheelChock",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"{\\\"Ghost-LeftHand#$609551\\\":true,\\\"Ghost-RightHand#$444939\\\":true}\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 808832,
+                  "Query": "WheelChock",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Both\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 808832,
+                    "Query": "WheelChock",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 622584,
+                    "Query": "WheelChock_PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Teleport",
+                    "Data": "{\"targetTransform\":\"RightWheelChock_SP#$947993\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 622584,
+                  "Query": "WheelChock_PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"WheelChock#$385170\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Place a chock at the marked tire.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Place the chock here.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"LeftWheelChock_SP#$283338\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The second wheel chock needs to be placed on the diagonally opposite tyre. Let me do it for you.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 143576,
+                "Query": "RightWheelChock",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 143576,
+                "Query": "RightWheelChock",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":5.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 143576,
+                "Query": "RightWheelChock",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Place Safety Cone at Dock Entry",
+          "momentIndex": 15,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"TrafficConeGrab_SP#$192283\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 884128,
+                "Query": "TrafficCone",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Next, you need to place a safety cone at the dock entry. Grab the safety cone and place it in position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 884128,
+                "Query": "TrafficCone",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 884128,
+                  "Query": "TrafficCone",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 884128,
+                    "Query": "TrafficCone",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 962125,
+                    "Query": "TrafficCone_PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Teleport",
+                    "Data": "{\"targetTransform\":\"TrafficConePlace_SP#$994332\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 962125,
+                  "Query": "TrafficCone_PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"TrafficCone#$121131\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Teleport",
+                    "Data": "{\"targetTransform\":\"TrafficConeGrab_SP#$192283\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Place the safety cone at the marked spot.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Place the cone here.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let me place a cone on each side of the truck for you.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 946199,
+                "Query": "OtherTrafficCones",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Monsoon PPE",
+          "momentIndex": 16,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 313102,
+                "Query": "WeaterChange",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 865910,
+                "Query": "MoonsoonVFX",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 797786,
+                "Query": "RainSFXPlayer",
+                "Option": "PlayLoop",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Rain-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.3,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"MoonsoonPPE_SP#$245477\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"During rainy days, you need to wear the monsoon-specific PPE. These include reflective raincoat, gum boots, an umbrella, a whistle, and a traffic baton. Go ahead and grab them from the table.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 689382,
+                "Query": "Umbrella",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 365631,
+                "Query": "LightBaton",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 193098,
+                "Query": "ReflectiveRaincoat",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 811535,
+                "Query": "RubberBoots",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 988089,
+                "Query": "Whistle3",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 689382,
+                  "Query": "Umbrella",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 689382,
+                    "Query": "Umbrella",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 689382,
+                    "Query": "Umbrella",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 689382,
+                    "Query": "Umbrella",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 365631,
+                  "Query": "LightBaton",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 365631,
+                    "Query": "LightBaton",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 365631,
+                    "Query": "LightBaton",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 365631,
+                    "Query": "LightBaton",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 193098,
+                  "Query": "ReflectiveRaincoat",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 193098,
+                    "Query": "ReflectiveRaincoat",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 193098,
+                    "Query": "ReflectiveRaincoat",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 193098,
+                    "Query": "ReflectiveRaincoat",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 811535,
+                  "Query": "RubberBoots",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 811535,
+                    "Query": "RubberBoots",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 811535,
+                    "Query": "RubberBoots",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 811535,
+                    "Query": "RubberBoots",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 988089,
+                  "Query": "Whistle3",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 988089,
+                    "Query": "Whistle3",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 988089,
+                    "Query": "Whistle3",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 988089,
+                    "Query": "Whistle3",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up all the PPE items you need during monsoon.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the highlighted PPE items now.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Remember at night, you'll always need to use a light baton to guide truck drivers.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": "6ab24abba8f307bdc1678db3"
+          }
+        },
+        {
+          "name": "Light Signal Types",
+          "momentIndex": 17,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"LightBaton_SP#$75377\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 753585,
+                "Query": "LightBaton2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The light signals made with a traffic baton mean different things. Take a look.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 248246,
+                "Query": "Blinking Red Text",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 163143,
+                "Query": "Light Baton Text",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 920685,
+                "Query": "Light_RedGlowBlinking",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"A blinking red light means caution.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":5.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 118489,
+                "Query": "Solid Red Text",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 248246,
+                "Query": "Blinking Red Text",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 445170,
+                "Query": "Light_RedGlow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 920685,
+                "Query": "Light_RedGlowBlinking",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"A solid red light means stop.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":5.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 664108,
+                "Query": "Solid Green Text",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 118489,
+                "Query": "Solid Red Text",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 758980,
+                "Query": "Light_GreenGlow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 445170,
+                "Query": "Light_RedGlow",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"A solid green light means go, or proceed forward.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":5.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 758980,
+                "Query": "Light_GreenGlow",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 163143,
+                "Query": "Light Baton Text",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 664108,
+                "Query": "Solid Green Text",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": "6ab24abba8f307bdc1678db5"
+          }
+        },
+        {
+          "name": "Signal Truck Departure",
+          "momentIndex": 18,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"SignalTruckMoonsoon_SP#$768034\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 753585,
+                "Query": "LightBaton2",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 897249,
+                "Query": "LightBaton3",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 651501,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"MCQPanel3_Transform#$713099\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Which light signal should you use to signal the truck to move?.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MCQResponseAction",
+                "ID": 651501,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "",
+                "Data": "{\"questionIndex\":3,\"questionText\":\"Which light should you use to signal the truck to move?\",\"optionsList\":[\"Solid Green\",\"Solid Red\",\"Blinking Red\"],\"correctOptionIndex\":[1],\"showAnswerDuration\":2.0,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Any",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 651501,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "CorrectResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 106046,
+                    "Query": "Light_GreenGlow1",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct, green means go.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 651501,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "WrongResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 292144,
+                    "Query": "Light_RedGlow1",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Not quite, that signal doesn't tell the driver to move.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 106046,
+                    "Query": "Light_GreenGlow1",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 292144,
+                    "Query": "Light_RedGlow1",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"green signal means go.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 897249,
+                    "Query": "LightBaton3",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Select the light that signals the truck to move.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\": \"Select the correct option now.\", \"waitForCompletion\": true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "PlayLoop",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 708375,
+                "Query": "MoonsoonTruck",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"TruckOutofBay1_Transform#$790800\",\"lerpDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "StopAndSkip",
+                "Data": "{\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Falling Cargo",
+          "momentIndex": 19,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 388779,
+                "Query": "Npc_TruckBoxesFall",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 708375,
+                "Query": "MoonsoonTruck",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 897249,
+                "Query": "LightBaton3",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us look at what happens if safety protocol while exiting the dock is not followed.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "PlayLoop",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/TruckDriving-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 388779,
+                "Query": "Npc_TruckBoxesFall",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_BoxesFall\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The truck driver was handed the key before the back door could be locked. When the truck started moving, the items inside fell out and struck the yard marshal.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Never hand the keys back to the driver before thoroughly checking that the loading or unloading is complete and the vehicle is safe to leave the dock.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "StopAndSkip",
+                "Data": "{\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Visitor Guidelines",
+          "momentIndex": 20,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 84302,
+                "Query": "YardPassVisitor",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 396106,
+                "Query": "NPC_ExtendingHand",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"VisitorPass_SP#$778455\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 388779,
+                "Query": "Npc_TruckBoxesFall",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"If there is a visitor at the dock, you are in-charge of their safety and visit. Always ensure that you provide them with the necessary P P E and educate them about using only the pedestrian walkway and crossings at all times.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"You need to give the visitors a valid yard pass for their entry. Grab the yard pass from the table and hand it over to the visitor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 84302,
+                "Query": "YardPassVisitor",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 84302,
+                  "Query": "YardPassVisitor",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 84302,
+                    "Query": "YardPassVisitor",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Teleport",
+                    "Data": "{\"targetTransform\":\"VisitorPassNPC_SP#$993112\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Animation",
+                    "ID": 396106,
+                    "Query": "NPC_ExtendingHand",
+                    "Option": "Play",
+                    "Data": "{\"_clipName\":\"Npc_ExtendingHand\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 475045,
+                    "Query": "YardPassVisitor_PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 475045,
+                  "Query": "YardPassVisitor_PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"YardPassVisitor#$999372\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Yard Pass Issued\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "CameraFade",
+                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 396106,
+                    "Query": "NPC_ExtendingHand",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 84302,
+                    "Query": "YardPassVisitor",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 475045,
+                    "Query": "YardPassVisitor_PP",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "CameraFade",
+                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Take the yard pass from the table and give it to the visitor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Hand the yard pass to the visitor now.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Remember that the visitors always follow your instructions as a yard marshal.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": "6ab24abba8f307bdc1678dbb"
+          }
+        },
+        {
+          "name": "Dos and Don'ts",
+          "momentIndex": 21,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"MoonsoonPPE_SP#$245477\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 306781,
+                "Query": "Do-Don't Bins",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 819239,
+                "Query": "Cards",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 847622,
+                "Query": "ExperiencePanelV2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"ExpPanelFinal_Transform#$185766\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let's review what you've learned. Grab each card, read it, and drop it in the correct bin — green for Do's, red for Don'ts.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":0.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "DeckCardSortingTrigger",
+                  "ID": 819239,
+                  "Query": "Cards",
+                  "Option": "Used",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 761264,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\": false, \"hapticIntensity\": 0.5, \"hapticDuration\": 0.3}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great job! You have learnt about the roles, responsibilities and operations of a yard marshal. You have completed the module.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 266513,
+                "Query": "Don't's_Bin-PP",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 229366,
+                "Query": "Do's_Bin-PP",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 306781,
+                "Query": "Do-Don't Bins",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 819239,
+                "Query": "Cards",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 727419,
+                "Query": "Confetti",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 761264,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Cheers_Applause-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    }
+  ],
+  "defaults": ""
+}

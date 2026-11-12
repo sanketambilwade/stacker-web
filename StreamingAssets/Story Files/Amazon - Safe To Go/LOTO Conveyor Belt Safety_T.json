@@ -1,0 +1,3928 @@
+{
+  "name": "LOTO Conveyor Belt Safety",
+  "formatVersion": 2.0,
+  "chapters": [
+    {
+      "name": "Hazard Awareness",
+      "chapterIndex": 0,
+      "moments": [
+        {
+          "name": "Equip PPE",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Configure",
+                "Data": "{\"titleText\":\"Hazard Awareness\",\"toggleInfos\":[\"Equip PPE\",\"Incident â€“ Loss of Footing\",\"Activate Emergency Stop\",\"Incident â€“ Entanglement Injury\"],\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"PPERoom_EXP-AT#$295590\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Welcome to Amazon Safe to Go training module. In this module, you will learn how to perform LOTO on a conveyor belt safely.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Working near a telescopic conveyor exposes you to moving parts, dock traffic, and pinch points. Your protective equipment is your first line of defence.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 189868,
+                "Query": "Shoes_GeneralSafetyPPE_1",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 529078,
+                "Query": "VestFlat_GeneralSafetyPPE_1",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 622766,
+                "Query": "GloveR_GeneralSafetyPPE",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the reflective jacket, safety boots, and gloves to put them on.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 189868,
+                "Query": "Shoes_GeneralSafetyPPE_1",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 529078,
+                "Query": "VestFlat_GeneralSafetyPPE_1",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 622766,
+                "Query": "GloveR_GeneralSafetyPPE",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 189868,
+                  "Query": "Shoes_GeneralSafetyPPE_1",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 189868,
+                    "Query": "Shoes_GeneralSafetyPPE_1",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 189868,
+                    "Query": "Shoes_GeneralSafetyPPE_1",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 189868,
+                    "Query": "Shoes_GeneralSafetyPPE_1",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 529078,
+                  "Query": "VestFlat_GeneralSafetyPPE_1",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 529078,
+                    "Query": "VestFlat_GeneralSafetyPPE_1",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 529078,
+                    "Query": "VestFlat_GeneralSafetyPPE_1",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 529078,
+                    "Query": "VestFlat_GeneralSafetyPPE_1",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 622766,
+                  "Query": "GloveR_GeneralSafetyPPE",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 622766,
+                    "Query": "GloveR_GeneralSafetyPPE",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 622766,
+                    "Query": "GloveR_GeneralSafetyPPE",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 622766,
+                    "Query": "GloveR_GeneralSafetyPPE",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HandVisibility",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "SetMaterial",
+                    "Data": "{\"targetHand\":\"Both\",\"material\":\"Materials/OVRHand_L\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Put on the reflective jacket, safety boots, and gloves before entering the work area.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Your PPE is laid in front of you. Grab each item and place it on your body.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"You are ready to step on the shop floor. Let us go!\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":1,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": "6abe3ac6a8f307bdc167ab8c"
+          }
+        },
+        {
+          "name": "Incident - Loss of Footing",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Incident-LOF_SP#$157128\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 108461,
+                "Query": "NPC_ClimbsBeltAndLosesFooting",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Conveyor injuries can happen in seconds when a machine has not been isolated. Observe what happens next.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"There was a blockage on the conveyor, to clear it the worker climbs onto the belt to clear it manually.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 108461,
+                "Query": "NPC_ClimbsBeltAndLosesFooting",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Npc_PokingAndFall\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":4.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 479955,
+                "Query": "ConveyorBoxLoop_Belt01 (1)",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"ConveyorBox-NPCTopple\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 26743,
+                "Query": "ConveyorSFXPlayer",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 190907,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/ManDeathScream-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.25,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 26743,
+                "Query": "ConveyorSFXPlayer",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"This was dangerous and an unsafe practice. You should always apply the emergency stop button before doing any maintenance work. There are sensors on the conveyor belt. During blockage, they automatically stop the belt movement but as soon as the blockage is cleared, it starts running the belt. Hence you should never stop on the conveyor belt without proper isolation.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": []
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":2,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Activate Emergency Stop",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"EmergencyStop-SP#$616011\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 108461,
+                "Query": "NPC_ClimbsBeltAndLosesFooting",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 284355,
+                "Query": "ConveyorBoxLoop_Belt01 (2)",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 479955,
+                "Query": "ConveyorBoxLoop_Belt01 (1)",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 26743,
+                "Query": "ConveyorSFXPlayer",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"If you spot anything dangerous, immediately press the nearest emergency stop button to prevent injury to anyone near the belt.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Locate the emergency button near you and press it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 215823,
+                "Query": "EmergencyStop_Button",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 114833,
+                "Query": "EmergencyButton_Arrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 215823,
+                  "Query": "EmergencyStop_Button",
+                  "Option": "Touch",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 114833,
+                    "Query": "EmergencyButton_Arrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 215823,
+                    "Query": "EmergencyStop_Button",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.8,\"hapticDuration\":0.2,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":true,\"audioClipName\":\"SFX/Mechanical-Click_SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Animation",
+                    "ID": 284355,
+                    "Query": "ConveyorBoxLoop_Belt01 (2)",
+                    "Option": "Stop",
+                    "Data": "{\"_clipName\":\"ConveyorBoxLoop_D\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 26743,
+                    "Query": "ConveyorSFXPlayer",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the emergency stop button to halt the conveyor.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The red emergency stop button is in front of you. Press it to stop the conveyor.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Incident - Entanglement Injury",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Incident_EI-SP#$234970\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 517331,
+                "Query": "NPC_HandCaughtInRollers",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 784247,
+                "Query": "AMZ_Loto_BeltCover (1)",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"This conveyor was repaired with its bottom guard removed. To test the repair, the team ran it without refitting the guard or reapplying LOTO.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 517331,
+                "Query": "NPC_HandCaughtInRollers",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Npc_HandStuck_001\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":5.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 190907,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/ManDeathScream-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The injured worker needs help immediately. Use the walkie-talkie to call for medical assistance.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 858730,
+                "Query": "WalkieTalkie",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 858730,
+                "Query": "WalkieTalkie",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 858730,
+                  "Query": "WalkieTalkie",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.4,\"hapticDuration\":0.15,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 858730,
+                    "Query": "WalkieTalkie",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":0.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/RadioStatic-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"There is a medical emergency. We need immediate medical assistance.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 858730,
+                    "Query": "WalkieTalkie",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the walkie-talkie to call for medical assistance.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The walkie-talkie is highlighted. Grab it and use it to request medical help.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"This is the emergency medical service, we are on our way to help.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Incident_EI2-SP#$201116\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 517331,
+                "Query": "NPC_HandCaughtInRollers",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 103874,
+                "Query": "NPC_CarryingWorkerOnAStretcher",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 103874,
+                "Query": "NPC_CarryingWorkerOnAStretcher",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"CarryingWorkerOnAStretcher\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    },
+    {
+      "name": "Pre-Isolation Preparation",
+      "chapterIndex": 1,
+      "moments": [
+        {
+          "name": "Collect Permit to Work",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Configure",
+                "Data": "{\"titleText\":\"Pre-Isolation Preparation\",\"toggleInfos\":[\"Collect Permit to Work\",\"Notify Affected Associates\",\"Review LOTO Placard\",\"Extend Conveyor\"],\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Permit-SP#$4749\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 191852,
+                "Query": "WorkPermit",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 103874,
+                "Query": "NPC_CarryingWorkerOnAStretcher",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 784247,
+                "Query": "AMZ_Loto_BeltCover (1)",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Every LOTO task begins with a plan. The Permit to Work records the task and every energy source that must be isolated before work starts.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the Permit to Work.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 191852,
+                "Query": "WorkPermit",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 191852,
+                  "Query": "WorkPermit",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.2,\"hapticDuration\":0.15}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 191852,
+                    "Query": "WorkPermit",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the Permit to Work before starting the isolation.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The Permit to Work is at the station in front of you. Grab it to continue.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 191852,
+                "Query": "WorkPermit",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":1,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Notify Affected Associates",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Everyone working in this area must know that isolation is about to begin, so no one attempts to start the conveyor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 595999,
+                "Query": "WalkieTalkie 2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the walkie-talkie and notify the team.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 595999,
+                "Query": "WalkieTalkie 2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 595999,
+                  "Query": "WalkieTalkie 2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.4,\"hapticDuration\":0.15}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 595999,
+                    "Query": "WalkieTalkie 2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":0.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/RadioStatic-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Isolation is about to begin. Do not start or operate the conveyor\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 595999,
+                    "Query": "WalkieTalkie 2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "StopAndSkip",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the walkie-talkie to notify the team.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The walkie-talkie is beside you. Use it to inform everyone that isolation work is starting.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Review LOTO Placard",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"ReviewLOTO-SP#$624768\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The LOTO placard on this conveyor lists every isolation point and energy type. You must review it before any isolation begins.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Touch the placard to acknowledge it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 58808,
+                "Query": "LOTO_Placard",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 965473,
+                "Query": "LOTOPlacard_Arrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 58808,
+                  "Query": "LOTO_Placard",
+                  "Option": "Touch",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 965473,
+                    "Query": "LOTOPlacard_Arrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.2,\"hapticDuration\":0.15}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 58808,
+                    "Query": "LOTO_Placard",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Touch the LOTO placard to acknowledge the isolation points.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The placard is mounted on the conveyor body in front of you. Touch it to continue.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"As per amazon's LOTO policy, each LOTO lock has only one key. So, if I’ve placed the LOTO lock, the key stays with me. There’s no group isolation box involved.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Extend Conveyor",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"ExtendConveyor-SP#$842334\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The conveyor cannot be repositioned once its power is isolated. It must be placed in the extended position first.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the Extend button until the conveyor is fully extended.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 284566,
+                "Query": "Extend_Button",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 98262,
+                "Query": "ExtendButton_Arrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 284566,
+                  "Query": "Extend_Button",
+                  "Option": "Touch",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 98262,
+                    "Query": "ExtendButton_Arrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.4,\"hapticDuration\":1.0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 284566,
+                    "Query": "Extend_Button",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the Extend button to move the conveyor into the extended position.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The Extend button is on the control panel in front of you. Press it until the conveyor stops extending.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":4,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    },
+    {
+      "name": "Energy Isolation",
+      "chapterIndex": 2,
+      "moments": [
+        {
+          "name": "Isolate E-1 Breaker",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Configure",
+                "Data": "{\"titleText\":\"Energy Isolation\",\"toggleInfos\":[\"Isolate E-1 Breaker\",\"Lockout E-1 Breaker\",\"Isolate E-2 Breaker\",\"Lockout E-2 Breaker\",\"Apply Padlock\",\"Isolate EMP-1 Breaker\",\"Lockout EMP-1 Breaker\",\"Begin Maintenance Work\",\"Dos and Donâ€™ts\"],\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"IsolateE1-SP#$1550\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The E-1 breaker supplies 415 volts to the telescopic conveyor. Switching it off is the first isolation point as per the S O P. The E-1 breaker is situated on an electrical panel on the conveyor belt itself.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Rotate the E-1 breaker to the Off position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 208938,
+                "Query": "E1_Breaker_Handle",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 860349,
+                "Query": "E1Button-AntiClockArrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 657956,
+                "Query": "E1Breaker_Arrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 208938,
+                  "Query": "E1_Breaker_Handle",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 657956,
+                    "Query": "E1Breaker_Arrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.8,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 208938,
+                    "Query": "E1_Breaker_Handle",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 208938,
+                  "Query": "E1_Breaker_Handle",
+                  "Option": "Max",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 860349,
+                    "Query": "E1Button-AntiClockArrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.8,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Mechanical-Click_SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabLockAction",
+                    "ID": 208938,
+                    "Query": "E1_Breaker_Handle",
+                    "Option": "GrabUnlock",
+                    "Data": "{\"forceRelease\":true,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 208938,
+                    "Query": "E1_Breaker_Handle",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 221258,
+                    "Query": "PannelLight_EH",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Rotate the E-1 breaker handle to the Off position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The E-1 breaker is on the front of the control panel. Grab the handle and turn it to OFF.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":1,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Lockout E-1 Breaker",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"A breaker that is only switched off can be turned back on by anyone. A padlock keeps E-1 isolated until your work is complete.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 372285,
+                "Query": "AmazonLotoLock",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the padlock and apply it to the E-1 breaker.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 372285,
+                "Query": "AmazonLotoLock",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 372285,
+                  "Query": "AmazonLotoLock",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 372285,
+                    "Query": "AmazonLotoLock",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 688099,
+                    "Query": "AmazonLotoLock-PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 688099,
+                  "Query": "AmazonLotoLock-PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"AmazonLotoLock#$130933\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the padlock and apply it to the E-1 breaker.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The padlock is infront of you. Place it on the E-1 lockout point to secure the breaker.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"You’ve isolated the first point of the telescopic conveyor. Every telescopic conveyor is connected to the D B. Our next point of  isolation is there. Let’s go.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Isolate E-2 Breaker",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"IsolateE2-SP#$762317\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 977704,
+                "Query": "AmazonPanelDoor_Right (1)",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"PanelDoor_Right_Open-AT#$890386\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 837079,
+                "Query": "AmazonPanelDoor_Left (1)",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"PanelDoor_Left_Open-AT#$255414\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The E-2 breaker, carries the 230-volt U P S supply to the conveyor. It can keep circuits live even after E-1 is off. You need to identify the E-2 breaker for the telescopic conveyor you need to isolate.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"I have identified the E-2 breaker for you. Now, pull down the E-2 breaker to the Off position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 482665,
+                "Query": "E2_Breaker",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 176628,
+                "Query": "E2Button-Arrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 482665,
+                  "Query": "E2_Breaker",
+                  "Option": "Touch",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 176628,
+                    "Query": "E2Button-Arrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.4,\"hapticDuration\":0.15}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 482665,
+                    "Query": "E2_Breaker",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Mechanical-Click_SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "ObjectAnimationAction",
+                    "ID": 482665,
+                    "Query": "E2_Breaker",
+                    "Option": "PositionRotation",
+                    "Data": "{\"targetTransform\":\"E2_Breaker_OFF-AT#$575713\",\"lerpDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pull the E-2 breaker down to the Off position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"E-2 is inside the control panel. Pull it down to OFF to isolate the U P S supply.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Lockout E-2 Breaker",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"A miniature circuit breaker is too small for a standard padlock. A circuit breaker lockout device holds it in the OFF position so it cannot be re-energized.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 100755,
+                "Query": "LockoutDevice",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the lockout device and apply it to the E-2 breaker.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 100755,
+                "Query": "LockoutDevice",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 100755,
+                  "Query": "LockoutDevice",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 100755,
+                    "Query": "LockoutDevice",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 462325,
+                    "Query": "LockoutDevice_PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 462325,
+                  "Query": "LockoutDevice_PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"LockoutDevice#$222094\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the lockout device and fit it onto the E-2 breaker.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The lockout device is infront of you. Place it on the breaker to lock in the Off position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"This screw helps tighten the lockout device to the breaker switch. Let me do it for you.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 701612,
+                "Query": "Nut",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":true,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 46633,
+                "Query": "NutTip",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":true,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 367985,
+                "Query": "LockoutDevice (1)_Mesh",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"Lockout_Closing\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 46633,
+                "Query": "NutTip",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 701612,
+                "Query": "Nut",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Apply Padlock",
+          "momentIndex": 4,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 958260,
+                "Query": "AmazonLotoLock 2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now, grab the padlock and apply it to lockout the E-2 breaker.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 958260,
+                "Query": "AmazonLotoLock 2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 958260,
+                  "Query": "AmazonLotoLock 2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 958260,
+                    "Query": "AmazonLotoLock 2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 530511,
+                    "Query": "AmazonLotoLock-PP 2",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 530511,
+                  "Query": "AmazonLotoLock-PP 2",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"AmazonLotoLock 2#$999388\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the padlock and apply it to the E-2 breaker.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The padlock is infront of you. Place it on the E-2 lockout point to secure the breaker.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Isolate EMP-1 Breaker",
+          "momentIndex": 5,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":4,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"IsolateEMP1-SP#$790715\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"EMP-1 is the 415-volt main power supply to the telescopic conveyor. It is the final electrical isolation point.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Turn the EMP-1 breaker to the OFF position.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 296797,
+                "Query": "EMP1_Breaker_Handle",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 548032,
+                "Query": "EMP1Button-Arrow",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 296797,
+                  "Query": "EMP1_Breaker_Handle",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.8,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 296797,
+                    "Query": "EMP1_Breaker_Handle",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 296797,
+                  "Query": "EMP1_Breaker_Handle",
+                  "Option": "Max",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 548032,
+                    "Query": "EMP1Button-Arrow",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.8,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Mechanical-Click_SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabLockAction",
+                    "ID": 296797,
+                    "Query": "EMP1_Breaker_Handle",
+                    "Option": "GrabUnlock",
+                    "Data": "{\"forceRelease\":true,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 296797,
+                    "Query": "EMP1_Breaker_Handle",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Turn the EMP-1 breaker to the OFF position.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"EMP-1 is in front of you. Grab the knob and turn it to OFF.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":6,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Lockout EMP-1 Breaker",
+          "momentIndex": 6,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 132393,
+                "Query": "AmazonLotoLock 3",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Apply the padlock lockout device to the EMP-1 breaker to secure it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 132393,
+                "Query": "AmazonLotoLock 3",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 132393,
+                  "Query": "AmazonLotoLock 3",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 132393,
+                    "Query": "AmazonLotoLock 3",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 835108,
+                    "Query": "AmazonLotoLock-PP 3",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 835108,
+                  "Query": "AmazonLotoLock-PP 3",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"AmazonLotoLock 3#$307644\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.2}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the padlock for performing lockout of the EMP-1 breaker.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The padlock is in front of you. Attach the padlock to the breaker.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":7,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Begin Maintenance Work",
+          "momentIndex": 7,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":6,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Maintenance-SP#$668673\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Every energy source has been isolated, and locked out. The conveyor is now safe for maintenance.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the cover guard to open it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 992582,
+                "Query": "AMZ_Loto_ConveyorCover2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 992582,
+                  "Query": "AMZ_Loto_ConveyorCover2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.5,\"hapticDuration\":0.3}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 992582,
+                    "Query": "AMZ_Loto_ConveyorCover2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "TimerAction",
+                    "ID": 24501,
+                    "Query": "CountDownTimer",
+                    "Option": "Start",
+                    "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 992582,
+                    "Query": "AMZ_Loto_ConveyorCover2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the bottom guard and pull it open to begin maintenance.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The bottom guard is in front of you. Grab its handle and open it.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":8,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Dos and Don'ts",
+          "momentIndex": 8,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"Do_Dont-SP#$58963\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 819239,
+                "Query": "Cards",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 306781,
+                "Query": "Do-Don't Bins",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let's review what you've learned. Grab each card, read it, and drop it in the correct bin — green for Do's, red for Don'ts.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "DeckCardSortingTrigger",
+                  "ID": 819239,
+                  "Query": "Cards",
+                  "Option": "Used",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.25,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 190907,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.3,\"hapticDuration\":0.3}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great job! You have learnt how to safely isolate and perform loto for a telescopic conveyor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 819239,
+                "Query": "Cards",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 306781,
+                "Query": "Do-Don't Bins",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 727419,
+                "Query": "Confetti",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 190907,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Short_Applause-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "Check",
+                "Data": "{\"index\":9,\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 750353,
+                "Query": "EXPERIENCE PANEL_NEW_UniText",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"Exp_End-AT#$830484\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    }
+  ],
+  "defaults": ""
+}

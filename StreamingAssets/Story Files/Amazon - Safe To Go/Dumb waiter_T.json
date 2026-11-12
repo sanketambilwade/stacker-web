@@ -1,0 +1,4358 @@
+{
+  "name": "Dumb Waiter",
+  "formatVersion": 2.0,
+  "chapters": [
+    {
+      "name": "Pre-Operation Safety Checks",
+      "chapterIndex": 0,
+      "moments": [
+        {
+          "name": "Module Overview",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 248622,
+                "Query": "ExperiencePanelV2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"ExpPanel1_Transform#$807662\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 374916,
+                "Query": "ScissorDoorUpperStatic",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"AMZ_ScissorDoor_AnimOpen\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Welcome to the Dumb Waiter Safe Operation Training. This module will walk you through every step of operating the dumb waiter correctly and safely.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 235537,
+                "Query": "Let'sBeginUIPanel",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"You will be an associate who will handle these transfers. Press the Let’s Begin button when you're ready.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "UIButtonTrigger",
+                  "ID": 194926,
+                  "Query": "LetsBeginButton",
+                  "Option": "OnClick",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 235537,
+                    "Query": "Let'sBeginUIPanel",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the Let’s Begin button to proceed.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Tap the highlighted Let’s Begin button on the panel.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Only trained and authorized personnel, Cafeteria staff or RME staff, are permitted to operate this equipment. Let's get started.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": "6aaa5b22a8f307bdc1677cf6"
+          }
+        },
+        {
+          "name": "Wear PPE",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 189868,
+                "Query": "Shoe",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 529078,
+                "Query": "Vest",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 622766,
+                "Query": "Gloves",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Before operating the Dumb Waiter, you need to gear up. Pick up and wear your safety shoes, safety jacket, and cut-resistant gloves.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 189868,
+                "Query": "Shoe",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 529078,
+                "Query": "Vest",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 622766,
+                "Query": "Gloves",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 189868,
+                  "Query": "Shoe",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 189868,
+                    "Query": "Shoe",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 189868,
+                    "Query": "Shoe",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 189868,
+                    "Query": "Shoe",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 529078,
+                  "Query": "Vest",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 529078,
+                    "Query": "Vest",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 529078,
+                    "Query": "Vest",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 529078,
+                    "Query": "Vest",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 622766,
+                  "Query": "Gloves",
+                  "Option": "Release",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.5,\"hapticDuration\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 622766,
+                    "Query": "Gloves",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HandVisibility",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "SetMaterial",
+                    "Data": "{\"targetHand\":\"Both\",\"material\":\"Materials/OVRHand_L\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 622766,
+                    "Query": "Gloves",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 622766,
+                    "Query": "Gloves",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the safety shoes, jacket, and gloves and wear them.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab each PPE item highlighted and put it on before continuing.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Confirm Authorization",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 603459,
+                "Query": "AmbientSFXPlayer",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"DumbWaiterEntranceArea_SP#$844515\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Only trained and authorized personnel are permitted to operate the Dumb Waiter.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Confirm that you are an authorized operator to continue.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 421238,
+                "Query": "AuthorizedUIPanel",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "UIButtonTrigger",
+                  "ID": 479732,
+                  "Query": " AuthorizedButton",
+                  "Option": "OnClick",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 421238,
+                    "Query": "AuthorizedUIPanel",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the 'I'm an Authorized Person' button to continue.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Tap the highlighted button in front of you to confirm your authorization.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Rider Warning",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 248622,
+                "Query": "ExperiencePanelV2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"ExpPanel2_Transform#$281994\",\"lerpDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"FailState1_SP#$270082\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The Dumb Waiter must never be used to transport people, under any circumstances.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 571983,
+                "Query": "Npc_GettingInsideLift",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 571983,
+                "Query": "Npc_GettingInsideLift",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_GettingInsideLift\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Watch closely, is this worker doing the right thing?\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MCQResponseAction",
+                "ID": 972138,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "",
+                "Data": "{\"questionIndex\":1,\"questionText\":\"Is this procedure correct?\",\"optionsList\":[\"Yes, this is correct\",\"No, this is not correct\"],\"correctOptionIndex\":[2],\"showAnswerDuration\":2.0,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 972138,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "AnyResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 571983,
+                    "Query": "Npc_GettingInsideLift",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Look at what the worker is doing, then answer, is this the correct procedure?\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Look at what the worker is doing, then answer, is this the correct procedure?\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Check Power",
+          "momentIndex": 4,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"PowerButton_SP#$696658\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Before using the Dumb Waiter, check the availability of power. The power button should be in the on condition. Touch the button to confirm it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 450473,
+                "Query": "PowerButton",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 689778,
+                "Query": "PowerButtonON",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 450473,
+                  "Query": "PowerButton",
+                  "Option": "Touch",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/ButtonPress-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":1.0,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 450473,
+                    "Query": "PowerButton",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 689778,
+                    "Query": "PowerButtonON",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Check the power button and confirm it is in the on condition.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Tap the highlighted power button to confirm it's on.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Check Indication Light",
+          "momentIndex": 5,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Before using the Dumb Waiter, check the floor indication light. We are in the first floor. Does the floor indication also match it?\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 972138,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"MCQ_Q2_Transform#$558248\",\"lerpDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MCQResponseAction",
+                "ID": 972138,
+                "Query": "MCQ EVALUATION PANEL_NEW",
+                "Option": "",
+                "Data": "{\"questionIndex\":2,\"questionText\":\"Does the floor indication and the current floor match?\",\"optionsList\":[\"Yes- Both show ground floor\",\"No - They do not match\",\"Yes - Both show first floor\"],\"correctOptionIndex\":[3],\"showAnswerDuration\":2.0,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Look at the panel, and check the cabin's position and choose the correct answer.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "MCQResponseTrigger",
+                  "ID": 972138,
+                  "Query": "MCQ EVALUATION PANEL_NEW",
+                  "Option": "AnyResponse",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Check the FLOOR INDICATION button and confirm the cabin's position.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Check the FLOOR INDICATION button and confirm the cabin's position.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Fail-State",
+          "momentIndex": 6,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"FailState1_SP#$270082\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let me show you why this check matters, this is based on a real incident.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"A supervisor and two associates were shifting coffee vending machines between floors using the Dumb Waiter. They were on the first floor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 578863,
+                "Query": "NPC_PlacingCoffeemachineV2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 578863,
+                "Query": "NPC_PlacingCoffeemachineV2",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_PlacingCoffeeMachineStart\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The supervisor called at the lower floor without informing the first floor team. Let’s go check that out in the ground floor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"FailState2_SP#$550622\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 865548,
+                "Query": "NPC_PressThePannelButton",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 865548,
+                "Query": "NPC_PressThePannelButton",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_PressThePannelButton\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now this is where it got bad when the lift started moving down on call. Quick, let’s go up and witness how rest of the incident unfolded.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 578863,
+                "Query": "NPC_PlacingCoffeemachineV2",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_PlacingCoffeeMachineloop\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"FailState1_SP#$270082\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 944190,
+                "Query": "NPC_PressingEmergencyButton",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 944190,
+                "Query": "NPC_PressingEmergencyButton",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_PressingEmergencyButton\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Animation",
+                "ID": 578863,
+                "Query": "NPC_PlacingCoffeemachineV2",
+                "Option": "Play",
+                "Data": "{\"_clipName\":\"NPC_PlacingCoffeeMachineEnd\",\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 590291,
+                "Query": "DumbWaiter_Lift_Static",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"LiftDoor2_Transform#$252460\",\"lerpDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 89495,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/ManDeathScream-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":4.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The second machine got jammed between the cabin and the platform. When the MST tried to force it free after pressing the emergency stop button, the cabin got freed and because of free fall started moving, and his arm was struck, resulting in a serious injury requiring hospitalization.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 133555,
+                "Query": "FailStateUIPanel",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "UIButtonTrigger",
+                  "ID": 465007,
+                  "Query": "UnderstandButton",
+                  "Option": "OnClick",
+                  "Data": "{\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 133555,
+                    "Query": "FailStateUIPanel",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 865548,
+                    "Query": "NPC_PressThePannelButton",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 578863,
+                    "Query": "NPC_PlacingCoffeemachineV2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 944190,
+                    "Query": "NPC_PressingEmergencyButton",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press 'I Understand' to continue once you've seen the incident.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Tap the highlighted button to continue.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Always confirm with the other floor and check the indication light before sending the cabin  never assume, and never force a jam. This is the reason why we have installed a curtain sensor.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 392903,
+                "Query": "CutainSensorLabels",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 332967,
+                "Query": "CurtainSensor",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"This immediately halts the machine whenever an object or a person breaks the light beam to prevent injury.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 332967,
+                "Query": "CurtainSensor",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 392903,
+                "Query": "CutainSensorLabels",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    },
+    {
+      "name": "Loading the Dumb Waiter",
+      "chapterIndex": 1,
+      "moments": [
+        {
+          "name": "Open Door",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"MachineDoor1_SP#$813649\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 381011,
+                "Query": "LiftDoor1",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 548358,
+                "Query": "DumbWaiter_Lift ",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 313092,
+                "Query": "LiftDoorLock",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 889604,
+                "Query": "ManualLeverLockUpper",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 251737,
+                "Query": "ScissorGateUpper",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 203233,
+                "Query": "StaticDoorOpen",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now, let’s try sending the coffee vending machine to the ground floor. First the external door’s lock has to be opened. Push it up to flip it open.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 313092,
+                "Query": "LiftDoorLock",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"{}\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 139668,
+                "Query": "UpperLiftDoorUnLock_Ghost",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 313092,
+                  "Query": "LiftDoorLock",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"{}\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 313092,
+                  "Query": "LiftDoorLock",
+                  "Option": "Min",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 532402,
+                    "Query": "LiftDoorLock_Dummy",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 139668,
+                    "Query": "UpperLiftDoorUnLock_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Good, now open the external cabin door. Keep your hands only on the designated handle, and open it gently\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 381011,
+                    "Query": "LiftDoor1",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"{}\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 317865,
+                    "Query": "DoorOpen_Ghost",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 381011,
+                  "Query": "LiftDoor1",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 381011,
+                    "Query": "LiftDoor1",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 381011,
+                  "Query": "LiftDoor1",
+                  "Option": "Min",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 317865,
+                    "Query": "DoorOpen_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the designated handle and gently open the secondary door.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Use only the highlighted handle to open the door.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Open Locks",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"LiftUpper_SP#$895235\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Before sliding the internal cabin door open, disengage the manual lever lock.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 889604,
+                "Query": "ManualLeverLockUpper",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 11897,
+                "Query": "UpperDoorLeverUnLock_Ghost",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 889604,
+                  "Query": "ManualLeverLockUpper",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 889604,
+                    "Query": "ManualLeverLockUpper",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 889604,
+                  "Query": "ManualLeverLockUpper",
+                  "Option": "Min",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 11897,
+                    "Query": "UpperDoorLeverUnLock_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the manual lever lock and disengage it before opening the sliding door.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Release the highlighted lever lock now.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Open Cabin Door",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 251737,
+                "Query": "ScissorGateUpper",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 889604,
+                "Query": "ManualLeverLockUpper",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now touch the dumb waiter cabin door to slide it open.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "GrabbablePropertyChangeAction",
+                "ID": 779943,
+                "Query": "ScissorGateUpper_Handle",
+                "Option": "ChangeIsGrabbable",
+                "Data": "{\"isGrabbable\":true,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 251737,
+                "Query": "ScissorGateUpper",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "TransformBoundsTrigger",
+                  "ID": 779943,
+                  "Query": "ScissorGateUpper_Handle",
+                  "Option": "Single",
+                  "Data": "{\"boundType\":\"PositionMaxX\",\"lockOnReach\":true,\"snapToExactBounds\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 251737,
+                    "Query": "ScissorGateUpper",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 779943,
+                    "Query": "ScissorGateUpper_Handle",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Touch the handle to slide the cabin door open, avoiding the pinch points.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Touch the highlighted door to open using only the designated handle.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Place Material Inside Cabin",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"CoffeeMachine_SP#$212058\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Place the coffee vending machine inside the cabin. Don't lean forward into the Dumb Waiter while doing this.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 378230,
+                "Query": "CoffeeMachine",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"{\\\"Ghost-LeftHand#$784245\\\":true,\\\"Ghost-RightHand#$758198\\\":true}\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 378230,
+                  "Query": "CoffeeMachine",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Both\",\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 378230,
+                    "Query": "CoffeeMachine",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"{\\\"Ghost-LeftHand#$784245\\\":false,\\\"Ghost-RightHand#$758198\\\":false}\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 584559,
+                    "Query": "CoffeeMachine_PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Player",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Teleport",
+                    "Data": "{\"targetTransform\":\"LiftUpper_SP#$895235\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 584559,
+                  "Query": "CoffeeMachine_PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"CoffeeMachine#$219502\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Pick up the material and place it inside the cabin, without leaning in.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Place the material inside the highlighted zone.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Fail-State",
+          "momentIndex": 4,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 837117,
+                "Query": "ProhibationSignage",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Notice this material is protruding outside the cabin. This isn't safe reposition it so it's fully inside before closing the doors.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 378230,
+                "Query": "CoffeeMachine",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"{\\\"Ghost-LeftHand#$784245\\\":true,\\\"Ghost-RightHand#$758198\\\":true}\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 926756,
+                "Query": "RedVignette-Effect",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 89495,
+                "Query": "SFXPlayer",
+                "Option": "PlayLoop",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/HeartBeat-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 378230,
+                  "Query": "CoffeeMachine",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Both\",\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 378230,
+                    "Query": "CoffeeMachine",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"{\\\"Ghost-LeftHand#$784245\\\":false,\\\"Ghost-RightHand#$758198\\\":false}\"},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 469397,
+                    "Query": "CoffeeMachineCorrectPos_PP",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 469397,
+                  "Query": "CoffeeMachineCorrectPos_PP",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"CoffeeMachine#$219502\",\"disableGrabOnPlace\":true,\"createGhostMesh\":true,\"deleteGhostMeshOnPlace\":true,\"enableGrab\":true,\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 837117,
+                    "Query": "ProhibationSignage",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 926756,
+                    "Query": "RedVignette-Effect",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Pause",
+                    "Data": "{\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Reposition the material so no part of it sticks out of the cabin.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Push the highlighted section of the material fully inside the cabin.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    },
+    {
+      "name": "Closing, Verification & Dispatch",
+      "chapterIndex": 2,
+      "moments": [
+        {
+          "name": "Close Door",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Close the primary sliding door. Make sure the manual lever lock is engaged, and keep clear of the pinch points.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "GrabbablePropertyChangeAction",
+                "ID": 779943,
+                "Query": "ScissorGateUpper_Handle",
+                "Option": "ChangeIsGrabbable",
+                "Data": "{\"isGrabbable\":true,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TransformBoundsAction",
+                "ID": 779943,
+                "Query": "ScissorGateUpper_Handle",
+                "Option": "Unlock",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 251737,
+                "Query": "ScissorGateUpper",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "TransformBoundsTrigger",
+                  "ID": 779943,
+                  "Query": "ScissorGateUpper_Handle",
+                  "Option": "Single",
+                  "Data": "{\"boundType\":\"PositionMinX\",\"lockOnReach\":true,\"snapToExactBounds\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 251737,
+                    "Query": "ScissorGateUpper",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 779943,
+                    "Query": "ScissorGateUpper_Handle",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Slide the primary door shut and make sure the manual lever lock engages.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Close the highlighted door fully and confirm the lever lock is engaged.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Closel Door Lock",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 889604,
+                "Query": "ManualLeverLockUpper",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 170834,
+                "Query": "ScissorGateUpper_Lock",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"With the primary door closed, engage the manual lever lock to secure it before moving on.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 889604,
+                "Query": "ManualLeverLockUpper",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 752657,
+                "Query": "UpperDoorLeverLock_Ghost",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 889604,
+                  "Query": "ManualLeverLockUpper",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 889604,
+                    "Query": "ManualLeverLockUpper",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "PivotRotateLimiterAction",
+                    "ID": 889604,
+                    "Query": "ManualLeverLockUpper",
+                    "Option": "Unlock",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 889604,
+                  "Query": "ManualLeverLockUpper",
+                  "Option": "Max",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 752657,
+                    "Query": "UpperDoorLeverLock_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the manual lever lock and engage it to secure the primary door.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Engage the highlighted lever lock now.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Close Secondary Door",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now close the external cabin door. Keep your hands only on the designated handle.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 381011,
+                "Query": "LiftDoor1",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 448482,
+                "Query": "DoorClose_Ghost",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 381011,
+                  "Query": "LiftDoor1",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 381011,
+                    "Query": "LiftDoor1",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "PivotRotateLimiterAction",
+                    "ID": 381011,
+                    "Query": "LiftDoor1",
+                    "Option": "Unlock",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 381011,
+                  "Query": "LiftDoor1",
+                  "Option": "Max",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 381011,
+                    "Query": "LiftDoor1",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 532402,
+                    "Query": "LiftDoorLock_Dummy",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 448482,
+                    "Query": "DoorClose_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"You know the drill, the lock has to be enabled now. Can you do it by pushing the highlighted latch in?\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":true,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 109580,
+                    "Query": "UpperLiftDoorLock_Ghost",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 313092,
+                  "Query": "LiftDoorLock",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":false,\"hapticIntensity\":0.25,\"hapticDuration\":0.25,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "PivotRotateLimiterAction",
+                    "ID": 313092,
+                    "Query": "LiftDoorLock",
+                    "Option": "Unlock",
+                    "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 313092,
+                  "Query": "LiftDoorLock",
+                  "Option": "Max",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 109580,
+                    "Query": "UpperLiftDoorLock_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the designated handle and close the secondary door and flip the latch to lock it.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Close the highlighted door using only the designated handle and flip the latch shut.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Press Send Down Button",
+          "momentIndex": 3,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"PowerButton_SP#$696658\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"With no warning indications present, press the Send button to dispatch the cabin. Monitor that it moves in the correct direction, and confirm both doors remain locked while it's moving.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 568417,
+                "Query": "Down_Button",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 568417,
+                  "Query": "Down_Button",
+                  "Option": "Touch",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/ButtonPress-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 568417,
+                    "Query": "Down_Button",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Press the Send button to dispatch the cabin.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Tap the highlighted Send button now.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let’s go down and retrieve the coffee vending machine.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Open Secondary Door",
+          "momentIndex": 4,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 248622,
+                "Query": "ExperiencePanelV2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"ExpPanel3_Transform#$200176\",\"lerpDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"DumbWaiterEntranceGroundFloorArea_SP#$408042\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"The cabin has arrived. Flip open the latch lock to open the secondary door.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 251309,
+                "Query": "LiftDoorLock2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 131005,
+                "Query": "LowerLiftDoorUnLock_Ghost",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 251309,
+                  "Query": "LiftDoorLock2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 251309,
+                    "Query": "LiftDoorLock2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 251309,
+                  "Query": "LiftDoorLock2",
+                  "Option": "Min",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 750204,
+                    "Query": "LiftDoorLock_Dummy2",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 251309,
+                    "Query": "LiftDoorLock2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 131005,
+                    "Query": "LowerLiftDoorUnLock_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Next, pull open the secondary door!\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 880488,
+                    "Query": "LiftDoor2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 965851,
+                    "Query": "LowerDoorOpen_Ghost",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 880488,
+                  "Query": "LiftDoor2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 880488,
+                    "Query": "LiftDoor2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 880488,
+                  "Query": "LiftDoor2",
+                  "Option": "Min",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "Objects",
+                    "ID": 965851,
+                    "Query": "LowerDoorOpen_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the designated handle and gently open the secondary door.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Use only the highlighted handle to open the door.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Open the Hatch",
+          "momentIndex": 5,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Before the primary door can be opened, release the hatch that locks the primary gate.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 860375,
+                "Query": "ManualLeverLockLower",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 68519,
+                "Query": "LowerLiftDoorUnLock_Ghost",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 860375,
+                  "Query": "ManualLeverLockLower",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 860375,
+                    "Query": "ManualLeverLockLower",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PivotRotateLimiterTrigger",
+                  "ID": 860375,
+                  "Query": "ManualLeverLockLower",
+                  "Option": "Min",
+                  "Data": "{\"lockOnReach\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 274406,
+                    "Query": "ScissorGateLower_Lock",
+                    "Option": "Spawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 860375,
+                    "Query": "ManualLeverLockLower",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 68519,
+                    "Query": "LowerLiftDoorUnLock_Ghost",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the hatch lock and release it to unlock the primary gate.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Release the highlighted hatch lock now.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Open Primary Door",
+          "momentIndex": 6,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 809457,
+                "Query": "ScissorGateLower",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now slide open the primary door, avoiding the pinch points.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "GrabbablePropertyChangeAction",
+                "ID": 750864,
+                "Query": "ScissorGateLower_Handle",
+                "Option": "ChangeIsGrabbable",
+                "Data": "{\"isGrabbable\":true,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 809457,
+                "Query": "ScissorGateLower",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "TransformBoundsTrigger",
+                  "ID": 750864,
+                  "Query": "ScissorGateLower_Handle",
+                  "Option": "Single",
+                  "Data": "{\"boundType\":\"PositionMaxX\",\"lockOnReach\":true,\"snapToExactBounds\":true,\"targetRoleSetId\":0}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 809457,
+                    "Query": "ScissorGateLower",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "GrabbablePropertyChangeAction",
+                    "ID": 750864,
+                    "Query": "ScissorGateLower_Handle",
+                    "Option": "ChangeIsGrabbable",
+                    "Data": "{\"isGrabbable\":false,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the handle and slide the primary door open, avoiding the pinch points.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Slide the highlighted door open using only the designated handle.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Retrieve the Coffee Maker",
+          "momentIndex": 7,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"CoffeeMaker2_SP#$429003\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Reach in and retrieve the coffee vending machine. Don't lean into the cabin while doing this.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "MetaLayerAction",
+                "ID": 958628,
+                "Query": "CoffeeMachine2",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":true,\"GhostHand\":{\"ghostHandsState\":\"{\\\"Ghost-LeftHand#$647652\\\":true,\\\"Ghost-RightHand#$341417\\\":true}\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Random",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 958628,
+                  "Query": "CoffeeMachine2",
+                  "Option": "Grab",
+                  "Data": "{\"handOption\":\"Both\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "MetaLayerAction",
+                    "ID": 958628,
+                    "Query": "CoffeeMachine2",
+                    "Option": "SetActive",
+                    "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":false},\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "VoiceOver",
+                    "ID": 891093,
+                    "Query": "VOPlayer",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Let me put this away for you.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "Objects",
+                    "ID": 958628,
+                    "Query": "CoffeeMachine2",
+                    "Option": "Despawn",
+                    "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grip the coffee vending machine and lift it out of the cabin, without leaning in.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Lift the highlighted coffee vending machine out of the cabin now.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"FinalMoment_SP#$421418\",\"shouldFade\":true,\"fadeDuration\":2.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great work here, let me close the dumb waiter doors for you.\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 750864,
+                "Query": "ScissorGateLower_Handle",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"ScissorGateLowerHandleClosed_Transform#$970833\",\"lerpDuration\":1.2,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 880488,
+                "Query": "LiftDoor2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"LiftDoor2_Transform#$252460\",\"lerpDuration\":3.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Do's and Don'ts",
+          "momentIndex": 8,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "ObjectAnimationAction",
+                "ID": 248622,
+                "Query": "ExperiencePanelV2",
+                "Option": "PositionRotation",
+                "Data": "{\"targetTransform\":\"ExpPanel4_Transform#$821577\",\"lerpDuration\":0.0,\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "Teleport",
+                "Data": "{\"targetTransform\":\"CardGame_SP#$268433\",\"shouldFade\":false,\"fadeDuration\":0.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 306781,
+                "Query": "Do-Don't Bins",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 819239,
+                "Query": "Cards",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Before we wrap up let's see what you remember. Sort these cards into what you should do, and what you should never do\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":0.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "DeckCardSortingTrigger",
+                  "ID": 819239,
+                  "Query": "Cards",
+                  "Option": "Used",
+                  "Data": "{\"handOption\":\"Any\",\"targetRoleSetId\":0}",
+                  "Type": 0
+                },
+                "actions": [
+                  {
+                    "Name": "HapticsAction",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Both",
+                    "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.25,\"hapticDuration\":0.25,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  },
+                  {
+                    "Name": "SFXPlayer",
+                    "ID": 89495,
+                    "Query": "SFXPlayer",
+                    "Option": "Play",
+                    "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Correct-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Think back through everything we covered, which of these keep you safe, and which put you at risk?\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onLastWarning": {
+            "actions": [
+              {
+                "Name": "HapticsAction",
+                "ID": -1,
+                "Query": "",
+                "Option": "Both",
+                "Data": "{\"waitForCompletion\":true,\"hapticIntensity\":0.6,\"hapticDuration\":0.3}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"Sort each card into 'Do this' or 'Don't do this' to continue.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": 891093,
+                "Query": "VOPlayer",
+                "Option": "Play",
+                "Data": "{\"text\":\"That's the full Dumb Waiter operation covered, wear your PPE, confirm authorization, check before you move it, and never take shortcuts with the doors or the warnings. Great work!\",\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 266513,
+                "Query": "Don't's_Bin-PP",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 229366,
+                "Query": "Do's_Bin-PP",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 306781,
+                "Query": "Do-Don't Bins",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 819239,
+                "Query": "Cards",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 2515,
+                "Query": "Card Deck Highlight",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 727419,
+                "Query": "Confetti",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Player",
+                "ID": -1,
+                "Query": "",
+                "Option": "CameraFade",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "SFXPlayer",
+                "ID": 89495,
+                "Query": "SFXPlayer",
+                "Option": "Play",
+                "Data": "{\"waitForCompletion\":false,\"audioClipName\":\"SFX/Cheers_Applause-SFX\",\"useCloudAudio\":false,\"audioUrl\":\"\",\"audioRange\":5.0,\"setVolume\":0.5,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "TimerAction",
+                "ID": 24501,
+                "Query": "CountDownTimer",
+                "Option": "Start",
+                "Data": "{\"duration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    }
+  ],
+  "defaults": ""
+}

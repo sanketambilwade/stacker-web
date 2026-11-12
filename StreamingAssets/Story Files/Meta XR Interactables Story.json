@@ -1,0 +1,721 @@
+{
+  "name": "Meta XR Interactions Tutorial",
+  "formatVersion": 2.0,
+  "chapters": [
+    {
+      "name": "Touch",
+      "chapterIndex": 0,
+      "vrseTile": "",
+      "moments": [
+        {
+          "name": "Touch Trigger",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 485368,
+                "Query": "CHAPTER 1 - TOUCH",
+                "Option": "Spawn",
+                "Data": "",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Welcome to VRse Builder Meta SDK Interactions Tutorial. In this tutorial you will be doing all the basic Interactions built using Meta XR Interaction SDK.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us start with Touch Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Go ahead and touch the Blue Cube.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 44110,
+                  "Query": "MetaXRBaseItem",
+                  "Option": "Touch",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Touched Successfully. Now Untouch the Blue Cube\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 44110,
+                  "Query": "MetaXRBaseItem",
+                  "Option": "Untouch",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Untouched Successfully.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great. You have mastered Touch Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    },
+    {
+      "name": "Grab",
+      "chapterIndex": 1,
+      "vrseTile": "",
+      "moments": [
+        {
+          "name": "Grabbable Trigger",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 485368,
+                "Query": "CHAPTER 1 - TOUCH",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 495732,
+                "Query": "CHAPTER 2 - GRAB",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us continue with Grab Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Go ahead and grab the Green Cube.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 714156,
+                  "Query": "MetaXRGrabbable",
+                  "Option": "Grab",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Grabbed Successfully. Now press the trigger button.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 714156,
+                  "Query": "MetaXRGrabbable",
+                  "Option": "Used",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Used Successfully. Now Release the Cube.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 714156,
+                  "Query": "MetaXRGrabbable",
+                  "Option": "Release",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Released Successfully.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great. You have mastered Grab Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    },
+    {
+      "name": "Place",
+      "chapterIndex": 2,
+      "vrseTile": "",
+      "moments": [
+        {
+          "name": "PlacePoint Trigger",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 495732,
+                "Query": "CHAPTER 2 - GRAB",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 419121,
+                "Query": "MOMENT (1)",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us continue with Place Interactions. First let us understand about placepoints with target grabbable ghost meshes.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the black capsule and place it in the placepoint, to trigger the OnWrong Event.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [
+            {
+              "trigger": {
+                "Name": "PlacePointTrigger",
+                "ID": 756807,
+                "Query": "MetaXRPlacePoint - Normal",
+                "Option": "Place",
+                "Data": "{\"grabbableName\":\"MetaXRGrabbable - Capsule#$818419\",\"createGhostMesh\":false}",
+                "Type": 1
+              },
+              "actions": [
+                {
+                  "Name": "VoiceOver",
+                  "ID": -1,
+                  "Query": "",
+                  "Option": "Play",
+                  "Data": "{\"text\":\"On Wrong Triggered! You have placed the wrong capsule even though ghost mesh was showing you cube. Remove the Capsule and place the Black Cube.\",\"waitForCompletion\":true}",
+                  "Type": 1
+                }
+              ]
+            }
+          ],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint - Normal",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Cube#$843879\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Black cube placed successfully. Now remove the black cube.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint - Normal",
+                  "Option": "Remove",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Cube#$843879\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Black cube removed. Now go ahead and place the black sphere into the placepoint.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint - Normal",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Sphere#$396603\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Black sphere placed successfully. Now remove the black sphere from the placepoint.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint - Normal",
+                  "Option": "Remove",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Sphere#$396603\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Black sphere removed successfully.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great you have mastered the placepoint events with ghost mesh representing exact ghost mesh. Also triggering OnWrong without displaying wrong grabbable's ghost mesh.\",\"waitForCompletion\":true}",
+                "Type": 1
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "PlacePoint Trigger - Custom Mesh",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 419121,
+                "Query": "MOMENT (1)",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 486349,
+                "Query": "MOMENT (2)",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now lets learn about placepoints having Custom Ghost Meshes.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Go ahead and place either capsule or cylinder into the blue semisphere which is a placepoint represented by a Custom Ghost Mesh.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "Any",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 879056,
+                  "Query": "MetaXRPlacePoint - CustomMesh",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"Cylinder_Grabbable#$240370\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Object placed in a placepoint represented by a Custom Ghost Mesh.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 879056,
+                  "Query": "MetaXRPlacePoint - CustomMesh",
+                  "Option": "Place",
+                  "Data": "{\"grabbableName\":\"Capsule_Grabbable#$424841\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Object placed in a placepoint represented by a Custom Ghost Mesh.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great! You have mastered Place Interactions with Custom Ghost Meshes also.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "PlacePoint Trigger - Correct and Wrong",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": [
+              {
+                "Name": "Objects",
+                "ID": 486349,
+                "Query": "MOMENT (2)",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 303543,
+                "Query": "MOMENT (3)",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Now lets learn about placepoints and options for placepoint trigger which can allow list of correct and wrong items and we can detect if correct item placed or wrong item placed\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"First, place any of the green items.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 313941,
+                  "Query": "MetaXRPlacePoint - CorrectWrong",
+                  "Option": "CorrectPlace",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct Item Placed. Remove the correct item.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 313941,
+                  "Query": "MetaXRPlacePoint - CorrectWrong",
+                  "Option": "CorrectRemove",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct Item Removed. Now place any of the red items.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 313941,
+                  "Query": "MetaXRPlacePoint - CorrectWrong",
+                  "Option": "WrongPlace",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Wrong Item Placed. Remove the wrong item.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 313941,
+                  "Query": "MetaXRPlacePoint - CorrectWrong",
+                  "Option": "WrongRemove",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Wrong Item Removed.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great. You have mastered all the Place Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    }
+  ],
+  "defaults": ""
+}

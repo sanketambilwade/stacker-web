@@ -1,0 +1,402 @@
+{
+  "name": "Meta XR Interactions Tutorial",
+  "formatVersion": 2.0,
+  "chapters": [
+    {
+      "name": "Touch, Grab and Place",
+      "chapterIndex": 0,
+      "moments": [
+        {
+          "name": "Touch Trigger",
+          "momentIndex": 0,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Welcome to VRse Builder Meta SDK Interactions Tutorial. In this tutorial you will be doing all the basic Interactions built using Meta XR Interaction SDK.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us start with Touch Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Go ahead and touch the Blue Cube.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 7351,
+                "Query": "ChecklistUI",
+                "Option": "Configure",
+                "Data": "{\"titleText\":\"ChecklistUITitle\",\"toggleInfos\":[\"Learn about Touch trigger\",\"Learn about Grabbable trigger\",\"Learn about Placepoint  trigger\"],\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 44110,
+                  "Query": "MetaXRBaseItem",
+                  "Option": "Touch",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Touched Successfully. Now Untouch the Blue Cube\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "HandTouchTrigger",
+                  "ID": 44110,
+                  "Query": "MetaXRBaseItem",
+                  "Option": "Untouch",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Untouched Successfully.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great. You have mastered Touch Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 7351,
+                "Query": "ChecklistUI",
+                "Option": "Check",
+                "Data": "{\"index\":1,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "Grabbable Trigger",
+          "momentIndex": 1,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us continue with Grab Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Go ahead and grab the Green Cube.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 911832,
+                  "Query": "MetaXRGrabbable - Correct",
+                  "Option": "Grab",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Grabbed Successfully. Now press the trigger button.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 911832,
+                  "Query": "MetaXRGrabbable - Correct",
+                  "Option": "Release",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Used Successfully. Now Release the Cube.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "GrabbableTrigger",
+                  "ID": 911832,
+                  "Query": "MetaXRGrabbable - Correct",
+                  "Option": "Grab",
+                  "Data": "",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Released Successfully.\",\"waitForCompletion\":true}",
+                    "Type": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great. You have mastered Grab Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 7351,
+                "Query": "ChecklistUI",
+                "Option": "Check",
+                "Data": "{\"index\":2,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        },
+        {
+          "name": "PlacePoint Trigger",
+          "momentIndex": 2,
+          "onAwake": {
+            "actions": []
+          },
+          "onStart": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Let us continue with Place Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Grab the Red Cube and Place it in the PlacePoint.\",\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "onWrong": [],
+          "onRight": {
+            "mode": "InOrder",
+            "triggerActionSets": [
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint",
+                  "Option": "WrongPlace",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Wrong#$116424\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Wrong Item Placed. Remove the wrong item.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint",
+                  "Option": "WrongRemove",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Wrong#$116424\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Wrong Item Removed. Place the Green Cube.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint",
+                  "Option": "CorrectPlace",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Correct#$911832\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct Item Placed. Remove the correct item.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              },
+              {
+                "trigger": {
+                  "Name": "PlacePointTrigger",
+                  "ID": 756807,
+                  "Query": "MetaXRPlacePoint",
+                  "Option": "CorrectRemove",
+                  "Data": "{\"grabbableName\":\"MetaXRGrabbable - Correct#$911832\"}",
+                  "Type": 1
+                },
+                "actions": [
+                  {
+                    "Name": "VoiceOver",
+                    "ID": -1,
+                    "Query": "",
+                    "Option": "Play",
+                    "Data": "{\"text\":\"Correct Item Removed.\",\"waitForCompletion\":true}",
+                    "Type": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "onFirstWarning": {
+            "actions": []
+          },
+          "onLastWarning": {
+            "actions": []
+          },
+          "onEnd": {
+            "actions": [
+              {
+                "Name": "VoiceOver",
+                "ID": -1,
+                "Query": "",
+                "Option": "Play",
+                "Data": "{\"text\":\"Great. You have mastered Place Interactions.\",\"waitForCompletion\":true}",
+                "Type": 0
+              },
+              {
+                "Name": "ChecklistUIToggle",
+                "ID": 7351,
+                "Query": "ChecklistUI",
+                "Option": "Check",
+                "Data": "{\"index\":3,\"waitForCompletion\":true}",
+                "Type": 0
+              }
+            ]
+          },
+          "defaults": "",
+          "studio": {
+            "id": ""
+          }
+        }
+      ],
+      "defaults": "",
+      "studio": {
+        "id": ""
+      }
+    }
+  ],
+  "defaults": "{\"storyMode\":\"Training\"}"
+}
