@@ -97,9 +97,24 @@
       pct.textContent = "";
     }
 
-    // Hosts such as GitHub Pages limit file size, so the deploy step may split the data file into
-    // numbered parts and set these two numbers. The parts are joined here, before Unity starts.
-    var dataParts = 2, dataBytes = 109857496;
+    // Hosts such as GitHub Pages limit file size, so the deploy step may split a data file into numbered parts; it
+    // lists the site's data files here as name: [parts, bytes]. The parts are joined below, before Unity starts.
+    // A module can have a second data file, "<name>.astc.data", with its textures for phone and tablet GPUs (the main
+    // one has them as crunched DXT, which computers read): a GPU that reads ASTC but not DXT gets that one.
+    var dataFiles = {"Stacker.astc.data.unityweb": [2, 101854247], "Stacker.data.unityweb": [0, 82836008]};
+    var gpu = [];
+    try {
+      var probe = document.createElement("canvas").getContext("webgl2");
+      gpu = (probe && probe.getSupportedExtensions()) || [];
+      var lose = probe && probe.getExtension("WEBGL_lose_context");
+      if (lose) lose.loseContext();
+    } catch (e) {}
+    var astcUrl = config.dataUrl.replace(".data", ".astc.data");
+    if (dataFiles[astcUrl.split("/").pop()] && gpu.indexOf("WEBGL_compressed_texture_s3tc") < 0
+        && gpu.indexOf("WEBGL_compressed_texture_astc") >= 0)
+      config.dataUrl = astcUrl;
+    var entry = dataFiles[config.dataUrl.split("/").pop()] || [0, 0];
+    var dataParts = entry[0], dataBytes = entry[1];
     var share = dataParts ? 0.9 : 0; // share of the progress bar used by the part downloads
     function downloadParts() {
       var got = 0, blobs = [];
