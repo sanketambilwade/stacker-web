@@ -24,7 +24,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -56,7 +56,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -242,7 +242,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -262,7 +262,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -302,7 +302,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -568,6 +568,14 @@
           "onEnd": {
             "actions": [
               {
+                "Name": "MetaLayerAction",
+                "ID": 188642,
+                "Query": "ID_Card",
+                "Option": "SetActive",
+                "Data": "{\"Outline\":false,\"Label\":false,\"Highlighter\":false,\"GhostHand\":{\"ghostHandsState\":\"\"},\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
                 "Name": "VoiceOver",
                 "ID": 891093,
                 "Query": "VOPlayer",
@@ -580,7 +588,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -612,7 +620,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -648,7 +656,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -672,7 +680,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -693,6 +701,14 @@
                 "Query": "CountDownTimer",
                 "Option": "Start",
                 "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 990101,
+                "Query": "WebShot_Zone1",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -737,6 +753,22 @@
               },
               {
                 "Name": "Objects",
+                "ID": 990102,
+                "Query": "WebShot_Zone2",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 990101,
+                "Query": "WebShot_Zone1",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
                 "ID": 987967,
                 "Query": "Zone 2",
                 "Option": "Spawn",
@@ -777,6 +809,22 @@
               },
               {
                 "Name": "Objects",
+                "ID": 990103,
+                "Query": "WebShot_Zone3",
+                "Option": "Spawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 990102,
+                "Query": "WebShot_Zone2",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
                 "ID": 302817,
                 "Query": "Zone 3",
                 "Option": "Spawn",
@@ -805,6 +853,14 @@
                 "Query": "Zone 3",
                 "Option": "Despawn",
                 "Data": "{\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Type": 0
+              },
+              {
+                "Name": "Objects",
+                "ID": 990103,
+                "Query": "WebShot_Zone3",
+                "Option": "Despawn",
+                "Data": "{\"waitForCompletion\":false,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -914,7 +970,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -934,7 +990,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -958,7 +1014,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -1152,7 +1208,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -1601,7 +1657,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -1713,7 +1769,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -1737,7 +1793,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -1957,7 +2013,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -1981,7 +2037,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -2293,7 +2349,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -2317,7 +2373,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -2425,7 +2481,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -2449,7 +2505,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -2711,7 +2767,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -2731,7 +2787,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -2803,7 +2859,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -2862,7 +2918,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -2882,7 +2938,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -2922,7 +2978,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3088,7 +3144,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3266,7 +3322,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3286,7 +3342,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -3318,7 +3374,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3492,7 +3548,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3522,7 +3578,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -3554,7 +3610,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3796,7 +3852,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3883,7 +3939,7 @@
                     "ID": 24501,
                     "Query": "CountDownTimer",
                     "Option": "Start",
-                    "Data": "{\"duration\":5.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -3937,7 +3993,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -3957,7 +4013,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -3973,7 +4029,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -4241,7 +4297,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -4442,7 +4498,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -4595,7 +4651,7 @@
                 "ID": 891093,
                 "Query": "VOPlayer",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -4635,7 +4691,7 @@
                 "ID": 891093,
                 "Query": "VOPlayer",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -4659,7 +4715,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -4877,7 +4933,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -4917,7 +4973,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -4957,7 +5013,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -4989,7 +5045,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -5045,7 +5101,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -5065,7 +5121,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -5145,7 +5201,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -5279,7 +5335,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -5299,7 +5355,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -5347,7 +5403,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -5529,7 +5585,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -5682,7 +5738,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -5956,7 +6012,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -6004,7 +6060,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -6084,7 +6140,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -6132,7 +6188,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -6252,7 +6308,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -6282,7 +6338,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -6338,7 +6394,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -6538,7 +6594,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -6578,7 +6634,7 @@
                     "ID": -1,
                     "Query": "",
                     "Option": "CameraFade",
-                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                    "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                     "Type": 0
                   },
                   {
@@ -6744,7 +6800,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -6898,7 +6954,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7083,7 +7139,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7220,7 +7276,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7240,7 +7296,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -7264,7 +7320,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7402,7 +7458,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -7426,7 +7482,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7632,7 +7688,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7652,7 +7708,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeIn\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
@@ -7692,7 +7748,7 @@
                 "ID": -1,
                 "Query": "",
                 "Option": "CameraFade",
-                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":1.0,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"fadeType\":\"FadeOut\",\"fadeDuration\":0.4,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               }
             ]
@@ -7828,7 +7884,7 @@
                 "ID": 24501,
                 "Query": "CountDownTimer",
                 "Option": "Start",
-                "Data": "{\"duration\":1.5,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
+                "Data": "{\"duration\":0.3,\"waitForCompletion\":true,\"targetRoleSetId\":0}",
                 "Type": 0
               },
               {
